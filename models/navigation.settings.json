@@ -23,8 +23,7 @@
       "required": true
     },
     "slug": {
-      "type": "uid",
-      "target": "name",
+      "type": "text",
       "configurable": false,
       "required": true
     },
@@ -38,6 +37,11 @@
       "plugin": "navigation",
       "via": "master",
       "configurable": false
+    },
+    "locale": {
+      "type": "text",
+      "configurable": true,
+      "required": true
     }
   }
 }
