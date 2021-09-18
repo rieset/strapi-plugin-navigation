@@ -91,7 +91,7 @@ module.exports = {
             const item = strapi.contentTypes[key];
             const { associations = [], kind, options, uid } = item;
             const { draftAndPublish } = options;
-            const hasDefinedNavigationRelation = associations.some(_ => _.model === 'navigationitem');
+            const hasDefinedNavigationRelation = associations.some(_ => _.collection === "navigationitem" || _.model === 'navigationitem');
 
             if (hasDefinedNavigationRelation) {
               const isSingleType = kind === KIND_TYPES.SINGLE;
