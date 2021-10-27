@@ -173,7 +173,7 @@ const DataManagerProvider = ({ children }) => {
       queryParams.append('_q', query);
     }
 
-    const contentTypeItems = await request(`${url}?${queryParams.toString()}`, {
+    const contentTypeItems = await request(`${url}?${queryParams.toString()}&_locale=`+ activeItem.locale, {
       method: "GET",
       signal,
     });
